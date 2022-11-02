@@ -8,10 +8,18 @@ function loadNames(e) {
     const genre = document.getElementById('genre').value;
     const amount = document.getElementById('quantity').value;
 
-    let url = 'https://uinames.com/api/?'
+    let url = ' '
 
     if (origin !== '') {
         url += `region=${origin}&`;
+    }
+
+    if (genre !== '') {
+        url += `gender=${genre}&`;
+    }
+
+    if (amount !== '') {
+        url += `amount=${amount}&`;
     }
 
     console.log(url)
