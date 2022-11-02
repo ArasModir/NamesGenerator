@@ -8,7 +8,7 @@ function loadNames(e) {
     const genre = document.getElementById('genre').value;
     const amount = document.getElementById('quantity').value;
 
-    let url = 'https://jsonplaceholder.typicode.com/posts';
+    let url = 'https://jsonplaceholder.typicode.com/users';
 
     if (origin !== '') {
         // url += `region=${origin}&`;
@@ -36,7 +36,7 @@ function loadNames(e) {
             html += '<ul class="list">'
             names.forEach(name => {
                 html += `
-                    <li>${name.title}</li>
+                    <li>${name.name}</li>
                 `;
             });
 
